@@ -77,6 +77,60 @@ class IngestTests(unittest.TestCase):
         self.assertEqual(ev[0]["start"], "2026-10-06T15:00:00-04:00")
         self.assertEqual(skipped, 1)
 
+    def test_permitted_events_geocoded_and_filtered(self):
+        import json
+        ig.GEO.enabled = False
+        ig.GEO.cache["manhattan|THOMPSON ST|W HOUSTON ST"] = [40.727353, -74.00058]
+        rows = [
+            {"event_id": "1", "event_name": "ST. ANTHONY FLEA MARKET", "event_type": "Sidewalk Sale",
+             "start_date_time": "2026-10-06T14:00:00.000", "end_date_time": "2026-10-06T18:00:00.000",
+             "event_borough": "Manhattan", "event_location": "WEST HOUSTON STREET between THOMPSON STREET and MACDOUGAL ST"},
+            {"event_id": "2", "event_name": "Celebration", "event_type": "Special Event",
+             "start_date_time": "2026-10-06T14:00:00.000", "end_date_time": "2026-10-06T18:00:00.000",
+             "event_borough": "Manhattan", "event_location": "Central Park: Summit Rock"},
+            {"event_id": "3", "event_name": "Unknown Corner Fair", "event_type": "Single Block Festival",
+             "start_date_time": "2026-10-06T14:00:00.000", "end_date_time": "2026-10-06T18:00:00.000",
+             "event_borough": "Queens", "event_location": "NOWHERE AVENUE between X STREET and Y STREET"},
+        ]
+        ev, skipped = ig.permitted_events(json.dumps(rows), NOW, "2026-10-06")
+        self.assertEqual([e["id"] for e in ev], ["nycpermit-1-20261006"])
+        self.assertEqual(ev[0]["title"], "St. Anthony Flea Market")
+        self.assertEqual(ev[0]["coordinate"], {"lat": 40.727353, "lng": -74.00058})
+        self.assertEqual(ev[0]["pricing"]["kind"], "unknown")
+        self.assertEqual(skipped, 2, "private permits and ungeocodable places are skipped")
+
+    def test_street_names(self):
+        self.assertEqual(ig.osm_street_name("WEST   41 STREET"), "West 41st Street")
+        self.assertEqual(ig.osm_street_name("EAST 111 STREET"), "East 111th Street")
+        self.assertEqual(ig.cscl_name("WEST   41 STREET"), "W 41 ST")
+        self.assertEqual(ig.cscl_name("KISSENA BOULEVARD"), "KISSENA BLVD")
+        self.assertEqual(ig.cscl_name("MACDOUGAL ST"), "MACDOUGAL ST")
+        self.assertEqual(ig.cscl_name("4 AVENUE"), "4 AVE")
+
+    def test_ticketmaster_parsing(self):
+        import json
+        payload = {"_embedded": {"events": [
+            {"id": "A1", "name": "Big Show", "url": "https://www.ticketmaster.com/x",
+             "dates": {"start": {"dateTime": "2026-10-06T23:30:00Z"}, "status": {"code": "onsale"}},
+             "classifications": [{"segment": {"name": "Music"}}], "priceRanges": [{"min": 45.0, "max": 120.0}],
+             "_embedded": {"venues": [{"name": "Madison Square Garden", "location": {"latitude": "40.7505", "longitude": "-73.9934"}}]}},
+            {"id": "A2", "name": "Cancelled Thing", "dates": {"start": {"dateTime": "2026-10-07T00:00:00Z"}, "status": {"code": "cancelled"}},
+             "_embedded": {"venues": [{"name": "V", "location": {"latitude": "40.75", "longitude": "-73.99"}}]}},
+            {"id": "A3", "name": "TBA", "dates": {"start": {"localDate": "2026-10-09", "timeTBA": True}},
+             "_embedded": {"venues": [{"name": "V", "location": {"latitude": "40.75", "longitude": "-73.99"}}]}},
+        ]}}
+        ev, skipped = ig.ticketmaster_events(json.dumps(payload), NOW, "2026-10-06")
+        self.assertEqual([e["id"] for e in ev], ["tm-A1"])
+        self.assertEqual(ev[0]["start"], "2026-10-06T19:30:00-04:00")
+        self.assertEqual(ev[0]["pricing"]["kind"], "ticketed")
+        self.assertEqual(ev[0]["pricing"]["minUSD"], 45.0)
+        self.assertEqual(ev[0]["verification"]["source"], "Ticketmaster")
+        self.assertEqual(skipped, 2)
+
+    def test_ticketmaster_not_configured_without_key(self):
+        os.environ.pop("TICKETMASTER_API_KEY", None)
+        self.assertIsNone(ig.ticketmaster_url(NOW))
+
     def test_events_validate(self):
         ev, _ = ig.parks_events(parks_item(), NOW, "2026-10-06")
         cat = {"schemaVersion": 1, "contentVersion": "t", "neighborhoods": [], "places": [], "events": ev, "collections": []}

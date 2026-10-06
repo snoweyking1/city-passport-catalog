@@ -9,7 +9,7 @@ on:
     paths: ["Catalog/catalog.source.json", "scripts/**", ".github/workflows/daily.yml"]
 
 permissions:
-  contents: read
+  contents: write   # only for the monthly keep-alive commit
   pages: write
   id-token: write
 
@@ -27,12 +27,31 @@ jobs:
           python-version: "3.12"
       - name: Test the ingester
         run: python scripts/test_ingest.py
-      - name: Fetch yesterday's snapshot (used only if a source is down)
+      - name: Fetch yesterday's snapshot and geocode cache
         run: |
           mkdir -p Catalog/dist
-          curl -fsSL "https://snoweyking1.github.io/city-passport-catalog/catalog.json" -o Catalog/dist/catalog.json || rm -f Catalog/dist/catalog.json
+          base="https://snoweyking1.github.io/city-passport-catalog"
+          curl -fsSL "$base/catalog.json" -o Catalog/dist/catalog.json || rm -f Catalog/dist/catalog.json
+          curl -fsSL "$base/geocache.json" -o Catalog/dist/geocache.json || rm -f Catalog/dist/geocache.json
       - name: Build and validate today's catalog
+        env:
+          TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}   # optional; source is skipped when unset
         run: python scripts/ingest_daily.py
+      - name: Keep the schedule alive
+        # GitHub pauses scheduled workflows after 60 days without repository activity.
+        # A tiny commit at most every ~30 days prevents that. Pushes by GITHUB_TOKEN don't re-trigger workflows.
+        if: github.event_name == 'schedule'
+        run: |
+          last=$(git log -1 --format=%ct)
+          if [ $(( $(date +%s) - last )) -gt $(( 30 * 86400 )) ]; then
+            mkdir -p status
+            date -u +%Y-%m-%dT%H:%M:%SZ > status/last-keepalive.txt
+            git config user.name "city-passport-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add status/last-keepalive.txt
+            git commit -m "Keep daily schedule active"
+            git push
+          fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
