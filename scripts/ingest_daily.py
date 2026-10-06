@@ -47,6 +47,8 @@ UA = "CityPassportCatalogBot/1.0 (daily, one request per source; +https://github
 WINDOW_DAYS = 14
 
 PARKS_URL = "https://www.nycgovparks.org/xml/events_300_rss.xml"
+# Same NYC Parks feed via NYC Open Data; reachable from cloud runners (the RSS host blocks them).
+PARKS_OPEN_DATA_URL = "https://data.cityofnewyork.us/resource/w3wp-dpdi.json?$limit=5000"
 NYCFF_URL = "https://www.nycforfree.co/events"
 NYC_CENTROID = (40.7127753, -74.0059728)  # placeholder used for "multiple locations"
 
@@ -108,54 +110,84 @@ PARKS_MAP = [
 ]
 
 
+def parks_event(raw, now, checked):
+    """Normalize one NYC Parks event (fields: title, guid, link, categories, coordinates, start, end,
+    location, parknames, description). Returns an event dict or None to skip."""
+    cats = [c.strip() for c in raw["categories"].split("|") if c.strip()]
+    title = re.sub(r"\s+", " ", html.unescape(raw["title"])).strip()
+    # Recurring classes and member programs aren't "things to do today" for a visitor.
+    if not cats or set(cats) & PARKS_SKIP or set(cats) <= {"Fitness", "Best for Kids", "Games"} \
+            or "open call" in title.lower():
+        return None
+    try:
+        lat, lng = [float(x) for x in raw["coordinates"].split(",")[:2]]
+    except Exception:
+        return None
+    start, end = raw["start"], raw["end"]
+    if not (start and end) or end <= start or end <= now or start.date() != end.date():
+        return None
+    if not (40.49 <= lat <= 40.92 and -74.27 <= lng <= -73.68):
+        return None
+    venue = html.unescape(raw.get("location") or raw.get("parknames") or "NYC park")
+    if re.search(r"virtual|online|zoom", venue, flags=re.I):
+        return None  # not a place you can go
+    interests = []
+    for group, interest in PARKS_MAP:
+        if group & set(cats) and interest not in interests:
+            interests.append(interest)
+    fee = re.search(r"\$\s?\d", raw.get("description") or "")
+    pricing = unknown_pricing("NYC Parks mentions a fee for this event; check the listing.") if fee else \
+        free_pricing("NYC Parks", "NYC Parks public event; no fee listed. Some need registration.")
+    url = (raw.get("link") or "https://www.nycgovparks.org/events").replace("http://", "https://")
+    return make_event(f"nycparks-{raw['guid']}", f"nycparks-{slug(title)}", title, start, end, lat, lng, venue,
+                      interests or ["outdoors"], f"Public NYC Parks event at {venue}. " + ", ".join(cats[:3]) + ".",
+                      pricing, url, "NYC Parks", checked)
+
+
+def parks_open_data_events(text, now, checked):
+    out, skipped = [], 0
+    for r in json.loads(text):
+        try:
+            raw = {"title": r.get("title", ""), "guid": r["guid"], "link": (r.get("link") or {}).get("url"),
+                   "categories": r.get("categories", ""), "coordinates": r.get("coordinates", ""),
+                   "start": dt.datetime.fromisoformat(r["starttime"]).replace(tzinfo=NY),
+                   "end": dt.datetime.fromisoformat(r["endtime"]).replace(tzinfo=NY),
+                   "location": r.get("location"), "parknames": r.get("parknames"), "description": r.get("description")}
+        except Exception:
+            skipped += 1
+            continue
+        e = parks_event(raw, now, checked)
+        if e:
+            out.append(e)
+        else:
+            skipped += 1
+    return out, skipped
+
+
 def parks_events(text, now, checked):
+    """NYC Parks RSS (fallback when Open Data is unavailable)."""
     out, skipped = [], 0
     for it in re.findall(r"<item>(.*?)</item>", text, flags=re.S):
         def tag(name):
             m = re.search(r"<%s>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</%s>" % (name, name), it, flags=re.S)
             return html.unescape(m.group(1)).strip() if m else ""
-        cats = [c.strip() for c in tag("event:categories").split("|") if c.strip()]
-        title = re.sub(r"\s+", " ", tag("title"))
-        # Recurring classes and member programs aren't "things to do today" for a visitor.
-        if not cats or set(cats) & PARKS_SKIP or set(cats) <= {"Fitness", "Best for Kids", "Games"} \
-                or "open call" in title.lower():
-            skipped += 1
-            continue
         try:
-            lat, lng = [float(x) for x in tag("event:coordinates").split(",")[:2]]
             d0 = dt.date.fromisoformat(tag("event:startdate"))
             d1 = dt.date.fromisoformat(tag("event:enddate") or tag("event:startdate"))
             t0, t1 = parse_clock(tag("event:starttime")), parse_clock(tag("event:endtime"))
+            raw = {"title": tag("title"), "guid": tag("guid"), "link": tag("link"), "categories": tag("event:categories"),
+                   "coordinates": tag("event:coordinates"),
+                   "start": dt.datetime.combine(d0, t0, NY) if t0 else None,
+                   "end": dt.datetime.combine(d1, t1, NY) if t1 else None,
+                   "location": tag("event:location"), "parknames": tag("event:parknames"), "description": tag("description")}
         except Exception:
             skipped += 1
             continue
-        if not (t0 and t1) or d1 != d0:
-            skipped += 1  # multi-day spans aren't single occurrences
-            continue
-        start = dt.datetime.combine(d0, t0, NY)
-        end = dt.datetime.combine(d1, t1, NY)
-        if end <= start or end <= now or not (40.49 <= lat <= 40.92 and -74.27 <= lng <= -73.68):
+        e = parks_event(raw, now, checked)
+        if e:
+            out.append(e)
+        else:
             skipped += 1
-            continue
-        interests = []
-        for group, interest in PARKS_MAP:
-            if group & set(cats) and interest not in interests:
-                interests.append(interest)
-        if not interests:
-            interests = ["outdoors"]
-        venue = tag("event:location") or tag("event:parknames") or "NYC park"
-        if re.search(r"virtual|online|zoom", venue, flags=re.I):
-            skipped += 1  # not a place you can go
-            continue
-        desc = tag("description")
-        fee = re.search(r"\$\s?\d", desc)
-        pricing = unknown_pricing("NYC Parks mentions a fee for this event; check the listing.") if fee else \
-            free_pricing("NYC Parks", "NYC Parks public event; no fee listed. Some need registration.")
-        guid = tag("guid")
-        url = tag("link").replace("http://", "https://")
-        out.append(make_event(f"nycparks-{guid}", f"nycparks-{slug(title)}", title, start, end, lat, lng, venue,
-                              interests, f"Public NYC Parks event at {venue}. " + ", ".join(cats[:3]) + ".",
-                              pricing, url, "NYC Parks", checked))
     return out, skipped
 
 
@@ -214,8 +246,10 @@ def nycff_events(text, now, checked):
 
 
 SOURCES = [
-    ("nycparks", "NYC Parks", PARKS_URL, "iso-8859-1", parks_events),
-    ("nycff", "NYC for FREE", NYCFF_URL, "utf-8", nycff_events),
+    # (id prefix, display name, [(url, encoding, parser), ...fallbacks])
+    ("nycparks", "NYC Parks", [(PARKS_OPEN_DATA_URL, "utf-8", parks_open_data_events),
+                               (PARKS_URL, "iso-8859-1", parks_events)]),
+    ("nycff", "NYC for FREE", [(NYCFF_URL, "utf-8", nycff_events)]),
 ]
 
 
@@ -227,22 +261,29 @@ def main():
     previous = json.load(open(OUT, encoding="utf-8")) if os.path.exists(OUT) else {"events": []}
 
     events, report = [], {}
-    for key, name, url, enc, parser in SOURCES:
+    for key, name, endpoints in SOURCES:
         prior = [e for e in previous.get("events", []) if e["id"].startswith(key + "-")
                  and dt.datetime.fromisoformat(e["end"]) > now]
         if "--offline" in args:
             events += prior
             report[name] = {"status": "offline", "events": len(prior)}
             continue
-        try:
-            got, skipped = parser(fetch(url, enc), now, checked)
-            if not got and prior:
-                raise ValueError("source returned no usable events")
-            events += got
-            report[name] = {"status": "ok", "events": len(got), "skipped": skipped, "url": url}
-        except Exception as e:  # keep yesterday's still-upcoming events for this source
+        errors = []
+        for url, enc, parser in endpoints:
+            try:
+                got, skipped = parser(fetch(url, enc), now, checked)
+                if not got:
+                    raise ValueError("no usable events")
+                events += got
+                report[name] = {"status": "ok", "events": len(got), "skipped": skipped, "url": url}
+                if errors:
+                    report[name]["fallbackFrom"] = errors
+                break
+            except Exception as e:
+                errors.append(f"{url.split('?')[0]}: {str(e)[:160]}")
+        else:  # every endpoint failed: keep yesterday's still-upcoming events for this source
             events += prior
-            report[name] = {"status": "failed", "error": str(e)[:200], "keptFromPrevious": len(prior), "url": url}
+            report[name] = {"status": "failed", "errors": errors, "keptFromPrevious": len(prior)}
 
     # De-duplicate the same thing listed twice (same title, same start).
     seen, unique = set(), []

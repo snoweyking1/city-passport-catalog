@@ -65,6 +65,18 @@ class IngestTests(unittest.TestCase):
         ev, skipped = ig.parks_events(parks_item(**{"event:categories": "Fitness | Shape Up NYC"}), NOW, "x")
         self.assertEqual((ev, skipped), ([], 1))
 
+    def test_parks_open_data(self):
+        import json
+        rows = [{"title": "Bird Walk", "guid": "9", "link": {"url": "http://www.nycgovparks.org/events/x"},
+                 "categories": "Nature | Tours", "coordinates": "40.70, -73.95", "starttime": "2026-10-06T15:00:00.000",
+                 "endtime": "2026-10-06T16:00:00.000", "location": "Prospect Park"},
+                {"title": "Online Talk", "guid": "10", "categories": "Talks", "coordinates": "40.70, -73.95",
+                 "starttime": "2026-10-06T15:00:00.000", "endtime": "2026-10-06T16:00:00.000", "location": "Virtual Event"}]
+        ev, skipped = ig.parks_open_data_events(json.dumps(rows), NOW, "2026-10-06")
+        self.assertEqual([e["id"] for e in ev], ["nycparks-9"])
+        self.assertEqual(ev[0]["start"], "2026-10-06T15:00:00-04:00")
+        self.assertEqual(skipped, 1)
+
     def test_events_validate(self):
         ev, _ = ig.parks_events(parks_item(), NOW, "2026-10-06")
         cat = {"schemaVersion": 1, "contentVersion": "t", "neighborhoods": [], "places": [], "events": ev, "collections": []}
