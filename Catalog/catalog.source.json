@@ -1,0 +1,2665 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "2026.10.06-1",
+  "generatedAt": "2026-10-06T12:00:00-04:00",
+  "provenance": "Seed catalog compiled by the City Passport team on 2026-10-06 from general knowledge and each venue's official website address. Hours and prices are deliberately left unknown unless they follow from the place being a public space. No events are published because none could be verified at compile time.",
+  "neighborhoods": [
+    {
+      "id": "fort-greene",
+      "name": "Fort Greene",
+      "borough": "brooklyn",
+      "mark": "FG",
+      "center": {
+        "lat": 40.688,
+        "lng": -73.9761
+      }
+    },
+    {
+      "id": "prospect-heights",
+      "name": "Prospect Heights",
+      "borough": "brooklyn",
+      "mark": "PH",
+      "center": {
+        "lat": 40.6703,
+        "lng": -73.9631
+      }
+    },
+    {
+      "id": "park-slope",
+      "name": "Park Slope",
+      "borough": "brooklyn",
+      "mark": "PS",
+      "center": {
+        "lat": 40.665,
+        "lng": -73.9707
+      }
+    },
+    {
+      "id": "downtown-brooklyn",
+      "name": "Downtown Brooklyn",
+      "borough": "brooklyn",
+      "mark": "DB",
+      "center": {
+        "lat": 40.6907,
+        "lng": -73.9832
+      }
+    },
+    {
+      "id": "brooklyn-heights",
+      "name": "Brooklyn Heights",
+      "borough": "brooklyn",
+      "mark": "BH",
+      "center": {
+        "lat": 40.6975,
+        "lng": -73.9955
+      }
+    },
+    {
+      "id": "dumbo",
+      "name": "Dumbo",
+      "borough": "brooklyn",
+      "mark": "DU",
+      "center": {
+        "lat": 40.7044,
+        "lng": -73.9892
+      }
+    },
+    {
+      "id": "greenwood-heights",
+      "name": "Greenwood Heights",
+      "borough": "brooklyn",
+      "mark": "GH",
+      "center": {
+        "lat": 40.6581,
+        "lng": -73.9943
+      }
+    },
+    {
+      "id": "williamsburg",
+      "name": "Williamsburg",
+      "borough": "brooklyn",
+      "mark": "WB",
+      "center": {
+        "lat": 40.7152,
+        "lng": -73.9665
+      }
+    },
+    {
+      "id": "coney-island",
+      "name": "Coney Island",
+      "borough": "brooklyn",
+      "mark": "CI",
+      "center": {
+        "lat": 40.573,
+        "lng": -73.98
+      }
+    },
+    {
+      "id": "navy-yard",
+      "name": "Navy Yard",
+      "borough": "brooklyn",
+      "mark": "NY",
+      "center": {
+        "lat": 40.6996,
+        "lng": -73.9737
+      }
+    },
+    {
+      "id": "chelsea",
+      "name": "Chelsea",
+      "borough": "manhattan",
+      "mark": "CH",
+      "center": {
+        "lat": 40.7414,
+        "lng": -74.008
+      }
+    },
+    {
+      "id": "upper-east-side",
+      "name": "Upper East Side",
+      "borough": "manhattan",
+      "mark": "UE",
+      "center": {
+        "lat": 40.7794,
+        "lng": -73.9632
+      }
+    },
+    {
+      "id": "midtown",
+      "name": "Midtown",
+      "borough": "manhattan",
+      "mark": "MT",
+      "center": {
+        "lat": 40.7558,
+        "lng": -73.979
+      }
+    },
+    {
+      "id": "central-park",
+      "name": "Central Park",
+      "borough": "manhattan",
+      "mark": "CP",
+      "center": {
+        "lat": 40.774,
+        "lng": -73.9708
+      }
+    },
+    {
+      "id": "lower-east-side",
+      "name": "Lower East Side",
+      "borough": "manhattan",
+      "mark": "LES",
+      "center": {
+        "lat": 40.7212,
+        "lng": -73.9885
+      }
+    },
+    {
+      "id": "washington-heights",
+      "name": "Washington Heights",
+      "borough": "manhattan",
+      "mark": "WH",
+      "center": {
+        "lat": 40.8649,
+        "lng": -73.9318
+      }
+    },
+    {
+      "id": "greenwich-village",
+      "name": "Greenwich Village",
+      "borough": "manhattan",
+      "mark": "GV",
+      "center": {
+        "lat": 40.7308,
+        "lng": -73.9973
+      }
+    },
+    {
+      "id": "financial-district",
+      "name": "Financial District",
+      "borough": "manhattan",
+      "mark": "FD",
+      "center": {
+        "lat": 40.7118,
+        "lng": -74.004
+      }
+    },
+    {
+      "id": "harlem",
+      "name": "Harlem",
+      "borough": "manhattan",
+      "mark": "HA",
+      "center": {
+        "lat": 40.8085,
+        "lng": -73.948
+      }
+    },
+    {
+      "id": "governors-island",
+      "name": "Governors Island",
+      "borough": "manhattan",
+      "mark": "GI",
+      "center": {
+        "lat": 40.6895,
+        "lng": -74.0168
+      }
+    },
+    {
+      "id": "east-village",
+      "name": "East Village",
+      "borough": "manhattan",
+      "mark": "EV",
+      "center": {
+        "lat": 40.7268,
+        "lng": -73.9858
+      }
+    },
+    {
+      "id": "long-island-city",
+      "name": "Long Island City",
+      "borough": "queens",
+      "mark": "LIC",
+      "center": {
+        "lat": 40.7603,
+        "lng": -73.9443
+      }
+    },
+    {
+      "id": "astoria",
+      "name": "Astoria",
+      "borough": "queens",
+      "mark": "AS",
+      "center": {
+        "lat": 40.768,
+        "lng": -73.923
+      }
+    },
+    {
+      "id": "flushing-meadows",
+      "name": "Flushing Meadows",
+      "borough": "queens",
+      "mark": "FM",
+      "center": {
+        "lat": 40.746,
+        "lng": -73.8458
+      }
+    },
+    {
+      "id": "bedford-park",
+      "name": "Bedford Park",
+      "borough": "bronx",
+      "mark": "BP",
+      "center": {
+        "lat": 40.8623,
+        "lng": -73.88
+      }
+    },
+    {
+      "id": "bronx-park",
+      "name": "Bronx Park",
+      "borough": "bronx",
+      "mark": "BX",
+      "center": {
+        "lat": 40.8506,
+        "lng": -73.877
+      }
+    },
+    {
+      "id": "riverdale",
+      "name": "Riverdale",
+      "borough": "bronx",
+      "mark": "RD",
+      "center": {
+        "lat": 40.8986,
+        "lng": -73.9126
+      }
+    },
+    {
+      "id": "concourse",
+      "name": "Concourse",
+      "borough": "bronx",
+      "mark": "CC",
+      "center": {
+        "lat": 40.8306,
+        "lng": -73.9201
+      }
+    },
+    {
+      "id": "st-george",
+      "name": "St. George",
+      "borough": "staten-island",
+      "mark": "SG",
+      "center": {
+        "lat": 40.6437,
+        "lng": -74.0736
+      }
+    },
+    {
+      "id": "new-brighton",
+      "name": "New Brighton",
+      "borough": "staten-island",
+      "mark": "NB",
+      "center": {
+        "lat": 40.6437,
+        "lng": -74.1027
+      }
+    },
+    {
+      "id": "fort-wadsworth",
+      "name": "Fort Wadsworth",
+      "borough": "staten-island",
+      "mark": "FW",
+      "center": {
+        "lat": 40.606,
+        "lng": -74.056
+      }
+    },
+    {
+      "id": "greenbelt",
+      "name": "Greenbelt",
+      "borough": "staten-island",
+      "mark": "GB",
+      "center": {
+        "lat": 40.5891,
+        "lng": -74.1383
+      }
+    }
+  ],
+  "places": [
+    {
+      "id": "fort-greene-park",
+      "name": "Fort Greene Park",
+      "address": "DeKalb Ave & Washington Park, Brooklyn, NY 11205",
+      "borough": "brooklyn",
+      "neighborhoodID": "fort-greene",
+      "coordinate": {
+        "lat": 40.6914,
+        "lng": -73.9757
+      },
+      "categories": [
+        "outdoors",
+        "architecture"
+      ],
+      "summary": "Hilly Olmsted and Vaux park topped by the Prison Ship Martyrs' Monument, with lawns and views toward Manhattan.",
+      "visitDuration": {
+        "minMinutes": 30,
+        "maxMinutes": 90
+      },
+      "pricing": {
+        "kind": "free",
+        "freeByNature": true,
+        "minUSD": 0,
+        "maxUSD": 0,
+        "note": null
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://www.nycgovparks.org/parks/fort-greene-park",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "brooklyn-museum",
+      "name": "Brooklyn Museum",
+      "address": "200 Eastern Pkwy, Brooklyn, NY 11238",
+      "borough": "brooklyn",
+      "neighborhoodID": "prospect-heights",
+      "coordinate": {
+        "lat": 40.6712,
+        "lng": -73.9636
+      },
+      "categories": [
+        "museums",
+        "culture"
+      ],
+      "summary": "One of the largest art museums in the country, with Egyptian, American and feminist art collections in a Beaux-Arts building.",
+      "visitDuration": {
+        "minMinutes": 90,
+        "maxMinutes": 180
+      },
+      "pricing": {
+        "kind": "unknown",
+        "freeByNature": false,
+        "minUSD": null,
+        "maxUSD": null,
+        "note": "Admission not yet verified."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date"
+      ],
+      "sourceURL": "https://www.brooklynmuseum.org",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "brooklyn-botanic-garden",
+      "name": "Brooklyn Botanic Garden",
+      "address": "990 Washington Ave, Brooklyn, NY 11225",
+      "borough": "brooklyn",
+      "neighborhoodID": "prospect-heights",
+      "coordinate": {
+        "lat": 40.6694,
+        "lng": -73.9625
+      },
+      "categories": [
+        "outdoors"
+      ],
+      "summary": "Fifty-two acres of themed gardens beside Prospect Park, including a Japanese Hill-and-Pond Garden.",
+      "visitDuration": {
+        "minMinutes": 60,
+        "maxMinutes": 150
+      },
+      "pricing": {
+        "kind": "ticketed",
+        "freeByNature": false,
+        "minUSD": null,
+        "maxUSD": null,
+        "note": "Admission is charged; current prices are on the official site."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://www.bbg.org",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "prospect-park",
+      "name": "Prospect Park",
+      "address": "Grand Army Plaza, Brooklyn, NY 11215",
+      "borough": "brooklyn",
+      "neighborhoodID": "park-slope",
+      "coordinate": {
+        "lat": 40.665,
+        "lng": -73.9707
+      },
+      "categories": [
+        "outdoors"
+      ],
+      "summary": "Olmsted and Vaux's 526-acre park with the Long Meadow, a lake and wooded ravines.",
+      "visitDuration": {
+        "minMinutes": 45,
+        "maxMinutes": 150
+      },
+      "pricing": {
+        "kind": "free",
+        "freeByNature": true,
+        "minUSD": 0,
+        "maxUSD": 0,
+        "note": null
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://www.prospectpark.org",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "bam",
+      "name": "BAM (Brooklyn Academy of Music)",
+      "address": "30 Lafayette Ave, Brooklyn, NY 11217",
+      "borough": "brooklyn",
+      "neighborhoodID": "fort-greene",
+      "coordinate": {
+        "lat": 40.6863,
+        "lng": -73.9779
+      },
+      "categories": [
+        "culture",
+        "architecture"
+      ],
+      "summary": "Long-running performing arts center with theater, dance, music and a cinema in a landmark 1908 building.",
+      "visitDuration": {
+        "minMinutes": 60,
+        "maxMinutes": 180
+      },
+      "pricing": {
+        "kind": "ticketed",
+        "freeByNature": false,
+        "minUSD": null,
+        "maxUSD": null,
+        "note": "Tickets vary by performance or screening."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "recommended",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date"
+      ],
+      "sourceURL": "https://www.bam.org",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "greenlight-bookstore",
+      "name": "Greenlight Bookstore",
+      "address": "686 Fulton St, Brooklyn, NY 11217",
+      "borough": "brooklyn",
+      "neighborhoodID": "fort-greene",
+      "coordinate": {
+        "lat": 40.6862,
+        "lng": -73.9746
+      },
+      "categories": [
+        "culture",
+        "hiddenGems"
+      ],
+      "summary": "Independent neighborhood bookstore with a strong local-author and kids' section.",
+      "visitDuration": {
+        "minMinutes": 20,
+        "maxMinutes": 60
+      },
+      "pricing": {
+        "kind": "variableSpend",
+        "freeByNature": false,
+        "minUSD": 0,
+        "maxUSD": null,
+        "note": "Free to browse; books are for sale."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date"
+      ],
+      "sourceURL": "https://www.greenlightbookstore.com",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "dekalb-market-hall",
+      "name": "DeKalb Market Hall",
+      "address": "445 Albee Square W, Brooklyn, NY 11201",
+      "borough": "brooklyn",
+      "neighborhoodID": "downtown-brooklyn",
+      "coordinate": {
+        "lat": 40.6907,
+        "lng": -73.9832
+      },
+      "categories": [
+        "food"
+      ],
+      "summary": "Underground food hall with dozens of counters, from dumplings to a Katz's outpost.",
+      "visitDuration": {
+        "minMinutes": 30,
+        "maxMinutes": 75
+      },
+      "pricing": {
+        "kind": "variableSpend",
+        "freeByNature": false,
+        "minUSD": 0,
+        "maxUSD": null,
+        "note": "Free to enter; you pay per counter."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "family"
+      ],
+      "sourceURL": "https://www.dekalbmarkethall.com",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "brooklyn-bridge-park",
+      "name": "Brooklyn Bridge Park",
+      "address": "334 Furman St, Brooklyn, NY 11201",
+      "borough": "brooklyn",
+      "neighborhoodID": "brooklyn-heights",
+      "coordinate": {
+        "lat": 40.702,
+        "lng": -73.9965
+      },
+      "categories": [
+        "outdoors"
+      ],
+      "summary": "Waterfront park on former shipping piers with lawns, play areas and close-up views of Lower Manhattan.",
+      "visitDuration": {
+        "minMinutes": 45,
+        "maxMinutes": 120
+      },
+      "pricing": {
+        "kind": "free",
+        "freeByNature": true,
+        "minUSD": 0,
+        "maxUSD": 0,
+        "note": null
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://www.brooklynbridgepark.org",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "janes-carousel",
+      "name": "Jane's Carousel",
+      "address": "Old Dock St, Brooklyn, NY 11201",
+      "borough": "brooklyn",
+      "neighborhoodID": "dumbo",
+      "coordinate": {
+        "lat": 40.7045,
+        "lng": -73.9918
+      },
+      "categories": [
+        "outdoors",
+        "hiddenGems"
+      ],
+      "summary": "Restored 1922 carousel in a glass pavilion on the Dumbo waterfront.",
+      "visitDuration": {
+        "minMinutes": 15,
+        "maxMinutes": 45
+      },
+      "pricing": {
+        "kind": "ticketed",
+        "freeByNature": false,
+        "minUSD": null,
+        "maxUSD": null,
+        "note": "A fare is charged per ride."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://www.janescarousel.com",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "brooklyn-heights-promenade",
+      "name": "Brooklyn Heights Promenade",
+      "address": "Columbia Heights & Montague St, Brooklyn, NY 11201",
+      "borough": "brooklyn",
+      "neighborhoodID": "brooklyn-heights",
+      "coordinate": {
+        "lat": 40.6957,
+        "lng": -73.9973
+      },
+      "categories": [
+        "outdoors",
+        "architecture"
+      ],
+      "summary": "Elevated walkway above the BQE with a classic view of the Manhattan skyline and harbor.",
+      "visitDuration": {
+        "minMinutes": 20,
+        "maxMinutes": 45
+      },
+      "pricing": {
+        "kind": "free",
+        "freeByNature": true,
+        "minUSD": 0,
+        "maxUSD": 0,
+        "note": null
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://www.nycgovparks.org/parks/brooklyn-heights-promenade",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "green-wood-cemetery",
+      "name": "Green-Wood Cemetery",
+      "address": "500 25th St, Brooklyn, NY 11232",
+      "borough": "brooklyn",
+      "neighborhoodID": "greenwood-heights",
+      "coordinate": {
+        "lat": 40.6581,
+        "lng": -73.9943
+      },
+      "categories": [
+        "outdoors",
+        "architecture",
+        "hiddenGems"
+      ],
+      "summary": "1838 garden cemetery and National Historic Landmark with hills, monuments and Brooklyn's highest natural point.",
+      "visitDuration": {
+        "minMinutes": 60,
+        "maxMinutes": 150
+      },
+      "pricing": {
+        "kind": "free",
+        "freeByNature": false,
+        "minUSD": 0,
+        "maxUSD": 0,
+        "note": "Entry to the grounds is generally free; tours are ticketed."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date"
+      ],
+      "sourceURL": "https://www.green-wood.com",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "domino-park",
+      "name": "Domino Park",
+      "address": "15 River St, Brooklyn, NY 11249",
+      "borough": "brooklyn",
+      "neighborhoodID": "williamsburg",
+      "coordinate": {
+        "lat": 40.7146,
+        "lng": -73.9686
+      },
+      "categories": [
+        "outdoors"
+      ],
+      "summary": "Waterfront park built around salvaged parts of the Domino Sugar refinery.",
+      "visitDuration": {
+        "minMinutes": 30,
+        "maxMinutes": 75
+      },
+      "pricing": {
+        "kind": "free",
+        "freeByNature": true,
+        "minUSD": 0,
+        "maxUSD": 0,
+        "note": null
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://www.dominopark.com",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "coney-island-boardwalk",
+      "name": "Coney Island Boardwalk",
+      "address": "Riegelmann Boardwalk, Brooklyn, NY 11224",
+      "borough": "brooklyn",
+      "neighborhoodID": "coney-island",
+      "coordinate": {
+        "lat": 40.573,
+        "lng": -73.98
+      },
+      "categories": [
+        "outdoors",
+        "hiddenGems"
+      ],
+      "summary": "Nearly three miles of boardwalk along the Atlantic, past the amusement parks and the beach.",
+      "visitDuration": {
+        "minMinutes": 45,
+        "maxMinutes": 120
+      },
+      "pricing": {
+        "kind": "free",
+        "freeByNature": true,
+        "minUSD": 0,
+        "maxUSD": 0,
+        "note": "Walking the boardwalk is free; rides and food cost extra."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://www.nycgovparks.org/parks/coney-island-beach-and-boardwalk",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "building-92",
+      "name": "Building 92, Brooklyn Navy Yard",
+      "address": "63 Flushing Ave, Brooklyn, NY 11205",
+      "borough": "brooklyn",
+      "neighborhoodID": "navy-yard",
+      "coordinate": {
+        "lat": 40.6996,
+        "lng": -73.9737
+      },
+      "categories": [
+        "museums",
+        "hiddenGems"
+      ],
+      "summary": "Visitor center and exhibition space on the history and present-day industry of the Brooklyn Navy Yard.",
+      "visitDuration": {
+        "minMinutes": 45,
+        "maxMinutes": 90
+      },
+      "pricing": {
+        "kind": "unknown",
+        "freeByNature": false,
+        "minUSD": null,
+        "maxUSD": null,
+        "note": "Admission not yet verified."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "family"
+      ],
+      "sourceURL": "https://www.brooklynnavyyard.com",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "center-for-brooklyn-history",
+      "name": "Center for Brooklyn History",
+      "address": "128 Pierrepont St, Brooklyn, NY 11201",
+      "borough": "brooklyn",
+      "neighborhoodID": "brooklyn-heights",
+      "coordinate": {
+        "lat": 40.6948,
+        "lng": -73.9926
+      },
+      "categories": [
+        "museums",
+        "culture",
+        "architecture"
+      ],
+      "summary": "Brooklyn Public Library's history center, with a landmark reading room and rotating exhibitions.",
+      "visitDuration": {
+        "minMinutes": 45,
+        "maxMinutes": 90
+      },
+      "pricing": {
+        "kind": "unknown",
+        "freeByNature": false,
+        "minUSD": null,
+        "maxUSD": null,
+        "note": "Admission not yet verified."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends"
+      ],
+      "sourceURL": "https://www.bklynlibrary.org/center-for-brooklyn-history",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "devocion-williamsburg",
+      "name": "Devoción",
+      "address": "69 Grand St, Brooklyn, NY 11249",
+      "borough": "brooklyn",
+      "neighborhoodID": "williamsburg",
+      "coordinate": {
+        "lat": 40.7158,
+        "lng": -73.9644
+      },
+      "categories": [
+        "cafes"
+      ],
+      "summary": "Colombian coffee roaster with a skylit, plant-filled café.",
+      "visitDuration": {
+        "minMinutes": 20,
+        "maxMinutes": 60
+      },
+      "pricing": {
+        "kind": "variableSpend",
+        "freeByNature": false,
+        "minUSD": 0,
+        "maxUSD": null,
+        "note": "Pay for what you order."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date"
+      ],
+      "sourceURL": "https://www.devocion.com",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "brooklyn-roasting-dumbo",
+      "name": "Brooklyn Roasting Company",
+      "address": "25 Jay St, Brooklyn, NY 11201",
+      "borough": "brooklyn",
+      "neighborhoodID": "dumbo",
+      "coordinate": {
+        "lat": 40.7043,
+        "lng": -73.9867
+      },
+      "categories": [
+        "cafes"
+      ],
+      "summary": "Roaster and café in a converted Dumbo warehouse.",
+      "visitDuration": {
+        "minMinutes": 20,
+        "maxMinutes": 45
+      },
+      "pricing": {
+        "kind": "variableSpend",
+        "freeByNature": false,
+        "minUSD": 0,
+        "maxUSD": null,
+        "note": "Pay for what you order."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date"
+      ],
+      "sourceURL": "https://www.brooklynroasting.com",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "high-line",
+      "name": "The High Line",
+      "address": "Gansevoort St & Washington St, New York, NY 10014",
+      "borough": "manhattan",
+      "neighborhoodID": "chelsea",
+      "coordinate": {
+        "lat": 40.7398,
+        "lng": -74.008
+      },
+      "categories": [
+        "outdoors",
+        "architecture"
+      ],
+      "summary": "Elevated park on a former freight rail line, planted with meadow gardens and lined with public art.",
+      "visitDuration": {
+        "minMinutes": 45,
+        "maxMinutes": 90
+      },
+      "pricing": {
+        "kind": "free",
+        "freeByNature": true,
+        "minUSD": 0,
+        "maxUSD": 0,
+        "note": null
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://www.thehighline.org",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "little-island",
+      "name": "Little Island",
+      "address": "Pier 55, Hudson River Park at W 13th St, New York, NY 10014",
+      "borough": "manhattan",
+      "neighborhoodID": "chelsea",
+      "coordinate": {
+        "lat": 40.742,
+        "lng": -74.01
+      },
+      "categories": [
+        "outdoors",
+        "architecture"
+      ],
+      "summary": "Undulating park on tulip-shaped piles over the Hudson, with lookouts and an amphitheater.",
+      "visitDuration": {
+        "minMinutes": 30,
+        "maxMinutes": 75
+      },
+      "pricing": {
+        "kind": "free",
+        "freeByNature": true,
+        "minUSD": 0,
+        "maxUSD": 0,
+        "note": "Entry is free; check the official site for any timed-entry periods."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://littleisland.org",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "the-met",
+      "name": "The Metropolitan Museum of Art",
+      "address": "1000 Fifth Ave, New York, NY 10028",
+      "borough": "manhattan",
+      "neighborhoodID": "upper-east-side",
+      "coordinate": {
+        "lat": 40.7794,
+        "lng": -73.9632
+      },
+      "categories": [
+        "museums",
+        "culture",
+        "architecture"
+      ],
+      "summary": "Encyclopedic art museum spanning 5,000 years, from the Temple of Dendur to European paintings.",
+      "visitDuration": {
+        "minMinutes": 120,
+        "maxMinutes": 240
+      },
+      "pricing": {
+        "kind": "unknown",
+        "freeByNature": false,
+        "minUSD": null,
+        "maxUSD": null,
+        "note": "Admission not yet verified."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date"
+      ],
+      "sourceURL": "https://www.metmuseum.org",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "moma",
+      "name": "The Museum of Modern Art",
+      "address": "11 W 53rd St, New York, NY 10019",
+      "borough": "manhattan",
+      "neighborhoodID": "midtown",
+      "coordinate": {
+        "lat": 40.7614,
+        "lng": -73.9776
+      },
+      "categories": [
+        "museums",
+        "culture"
+      ],
+      "summary": "Modern and contemporary art, design and film, including Van Gogh's The Starry Night.",
+      "visitDuration": {
+        "minMinutes": 90,
+        "maxMinutes": 180
+      },
+      "pricing": {
+        "kind": "unknown",
+        "freeByNature": false,
+        "minUSD": null,
+        "maxUSD": null,
+        "note": "Admission not yet verified."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date"
+      ],
+      "sourceURL": "https://www.moma.org",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "central-park-bethesda",
+      "name": "Bethesda Terrace, Central Park",
+      "address": "Central Park at 72nd St, New York, NY 10024",
+      "borough": "manhattan",
+      "neighborhoodID": "central-park",
+      "coordinate": {
+        "lat": 40.774,
+        "lng": -73.9708
+      },
+      "categories": [
+        "outdoors",
+        "architecture"
+      ],
+      "summary": "The two-level terrace and Bethesda Fountain at the heart of Central Park, overlooking the Lake.",
+      "visitDuration": {
+        "minMinutes": 45,
+        "maxMinutes": 120
+      },
+      "pricing": {
+        "kind": "free",
+        "freeByNature": true,
+        "minUSD": 0,
+        "maxUSD": 0,
+        "note": null
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://www.centralparknyc.org",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "tenement-museum",
+      "name": "Tenement Museum",
+      "address": "103 Orchard St, New York, NY 10002",
+      "borough": "manhattan",
+      "neighborhoodID": "lower-east-side",
+      "coordinate": {
+        "lat": 40.7188,
+        "lng": -73.99
+      },
+      "categories": [
+        "museums",
+        "culture"
+      ],
+      "summary": "Guided tours through restored apartments that tell the stories of immigrant families on the Lower East Side.",
+      "visitDuration": {
+        "minMinutes": 60,
+        "maxMinutes": 120
+      },
+      "pricing": {
+        "kind": "ticketed",
+        "freeByNature": false,
+        "minUSD": null,
+        "maxUSD": null,
+        "note": "Visits are by guided tour; tickets are sold on the official site."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "recommended",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date"
+      ],
+      "sourceURL": "https://www.tenement.org",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "nypl-schwarzman",
+      "name": "New York Public Library, Stephen A. Schwarzman Building",
+      "address": "476 Fifth Ave, New York, NY 10018",
+      "borough": "manhattan",
+      "neighborhoodID": "midtown",
+      "coordinate": {
+        "lat": 40.7532,
+        "lng": -73.9822
+      },
+      "categories": [
+        "architecture",
+        "culture"
+      ],
+      "summary": "The 1911 Beaux-Arts library with the Rose Main Reading Room and free exhibitions.",
+      "visitDuration": {
+        "minMinutes": 30,
+        "maxMinutes": 75
+      },
+      "pricing": {
+        "kind": "free",
+        "freeByNature": true,
+        "minUSD": 0,
+        "maxUSD": 0,
+        "note": "A public library; there is no admission charge."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://www.nypl.org/locations/schwarzman",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "grand-central",
+      "name": "Grand Central Terminal",
+      "address": "89 E 42nd St, New York, NY 10017",
+      "borough": "manhattan",
+      "neighborhoodID": "midtown",
+      "coordinate": {
+        "lat": 40.7527,
+        "lng": -73.9772
+      },
+      "categories": [
+        "architecture",
+        "hiddenGems"
+      ],
+      "summary": "Working rail terminal with a celestial ceiling, the Whispering Gallery and a lower-level dining concourse.",
+      "visitDuration": {
+        "minMinutes": 20,
+        "maxMinutes": 45
+      },
+      "pricing": {
+        "kind": "free",
+        "freeByNature": true,
+        "minUSD": 0,
+        "maxUSD": 0,
+        "note": "A public transit hub; no charge to walk through."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://www.grandcentralterminal.com",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "met-cloisters",
+      "name": "The Met Cloisters",
+      "address": "99 Margaret Corbin Dr, New York, NY 10040",
+      "borough": "manhattan",
+      "neighborhoodID": "washington-heights",
+      "coordinate": {
+        "lat": 40.8649,
+        "lng": -73.9318
+      },
+      "categories": [
+        "museums",
+        "architecture",
+        "hiddenGems"
+      ],
+      "summary": "Medieval art and gardens set in reassembled European cloisters inside Fort Tryon Park.",
+      "visitDuration": {
+        "minMinutes": 90,
+        "maxMinutes": 150
+      },
+      "pricing": {
+        "kind": "unknown",
+        "freeByNature": false,
+        "minUSD": null,
+        "maxUSD": null,
+        "note": "Admission not yet verified."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date"
+      ],
+      "sourceURL": "https://www.metmuseum.org/plan-your-visit/met-cloisters",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "washington-square-park",
+      "name": "Washington Square Park",
+      "address": "Washington Square, New York, NY 10012",
+      "borough": "manhattan",
+      "neighborhoodID": "greenwich-village",
+      "coordinate": {
+        "lat": 40.7308,
+        "lng": -73.9973
+      },
+      "categories": [
+        "outdoors",
+        "culture"
+      ],
+      "summary": "Village park around the arch and fountain, known for street musicians and chess players.",
+      "visitDuration": {
+        "minMinutes": 20,
+        "maxMinutes": 60
+      },
+      "pricing": {
+        "kind": "free",
+        "freeByNature": true,
+        "minUSD": 0,
+        "maxUSD": 0,
+        "note": null
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://www.nycgovparks.org/parks/washington-square-park",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "brooklyn-bridge-walk",
+      "name": "Brooklyn Bridge walkway",
+      "address": "Centre St & Chambers St, New York, NY 10007",
+      "borough": "manhattan",
+      "neighborhoodID": "financial-district",
+      "coordinate": {
+        "lat": 40.7118,
+        "lng": -74.004
+      },
+      "categories": [
+        "outdoors",
+        "architecture"
+      ],
+      "summary": "Walk the 1883 bridge's elevated promenade between Lower Manhattan and Dumbo.",
+      "visitDuration": {
+        "minMinutes": 30,
+        "maxMinutes": 75
+      },
+      "pricing": {
+        "kind": "free",
+        "freeByNature": true,
+        "minUSD": 0,
+        "maxUSD": 0,
+        "note": null
+      },
+      "hours": {
+        "kind": "alwaysOpen"
+      },
+      "reservation": "unknown",
+      "accessNotes": "The promenade can be crowded; cyclists use a separate lane.",
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "chelsea-market",
+      "name": "Chelsea Market",
+      "address": "75 9th Ave, New York, NY 10011",
+      "borough": "manhattan",
+      "neighborhoodID": "chelsea",
+      "coordinate": {
+        "lat": 40.7424,
+        "lng": -74.0061
+      },
+      "categories": [
+        "food"
+      ],
+      "summary": "Food hall inside the former Nabisco factory, with bakeries, seafood, tacos and shops.",
+      "visitDuration": {
+        "minMinutes": 30,
+        "maxMinutes": 75
+      },
+      "pricing": {
+        "kind": "variableSpend",
+        "freeByNature": false,
+        "minUSD": 0,
+        "maxUSD": null,
+        "note": "Free to enter; you pay per vendor."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "family"
+      ],
+      "sourceURL": "https://www.chelseamarket.com",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "studio-museum-harlem",
+      "name": "The Studio Museum in Harlem",
+      "address": "144 W 125th St, New York, NY 10027",
+      "borough": "manhattan",
+      "neighborhoodID": "harlem",
+      "coordinate": {
+        "lat": 40.8085,
+        "lng": -73.948
+      },
+      "categories": [
+        "museums",
+        "culture"
+      ],
+      "summary": "Museum devoted to artists of African descent, known for its artist-in-residence program.",
+      "visitDuration": {
+        "minMinutes": 60,
+        "maxMinutes": 120
+      },
+      "pricing": {
+        "kind": "unknown",
+        "freeByNature": false,
+        "minUSD": null,
+        "maxUSD": null,
+        "note": "Admission not yet verified."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date"
+      ],
+      "sourceURL": "https://studiomuseum.org",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "governors-island",
+      "name": "Governors Island",
+      "address": "Battery Maritime Building, 10 South St, New York, NY 10004",
+      "borough": "manhattan",
+      "neighborhoodID": "governors-island",
+      "coordinate": {
+        "lat": 40.6895,
+        "lng": -74.0168
+      },
+      "categories": [
+        "outdoors",
+        "hiddenGems"
+      ],
+      "summary": "Car-free island with hammocks, hills built from recycled material and harbor views.",
+      "visitDuration": {
+        "minMinutes": 120,
+        "maxMinutes": 240
+      },
+      "pricing": {
+        "kind": "ticketed",
+        "freeByNature": false,
+        "minUSD": null,
+        "maxUSD": null,
+        "note": "Reached by ferry; fares and schedules are on the official site."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": "Only reachable by ferry. Check the schedule before you go.",
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://www.govisland.com",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "katzs-delicatessen",
+      "name": "Katz's Delicatessen",
+      "address": "205 E Houston St, New York, NY 10002",
+      "borough": "manhattan",
+      "neighborhoodID": "lower-east-side",
+      "coordinate": {
+        "lat": 40.7223,
+        "lng": -73.9874
+      },
+      "categories": [
+        "food"
+      ],
+      "summary": "Cafeteria-style Jewish deli famous for hand-cut pastrami since 1888.",
+      "visitDuration": {
+        "minMinutes": 30,
+        "maxMinutes": 60
+      },
+      "pricing": {
+        "kind": "variableSpend",
+        "freeByNature": false,
+        "minUSD": 0,
+        "maxUSD": null,
+        "note": "Pay for what you order."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "family"
+      ],
+      "sourceURL": "https://katzsdelicatessen.com",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "russ-and-daughters",
+      "name": "Russ & Daughters",
+      "address": "179 E Houston St, New York, NY 10002",
+      "borough": "manhattan",
+      "neighborhoodID": "lower-east-side",
+      "coordinate": {
+        "lat": 40.7226,
+        "lng": -73.9882
+      },
+      "categories": [
+        "food"
+      ],
+      "summary": "Appetizing shop selling smoked fish, bagels and caviar since 1914.",
+      "visitDuration": {
+        "minMinutes": 15,
+        "maxMinutes": 30
+      },
+      "pricing": {
+        "kind": "variableSpend",
+        "freeByNature": false,
+        "minUSD": 0,
+        "maxUSD": null,
+        "note": "Pay for what you order."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date"
+      ],
+      "sourceURL": "https://www.russanddaughters.com",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "abraco",
+      "name": "Abraço",
+      "address": "81 E 7th St, New York, NY 10003",
+      "borough": "manhattan",
+      "neighborhoodID": "east-village",
+      "coordinate": {
+        "lat": 40.7268,
+        "lng": -73.9858
+      },
+      "categories": [
+        "cafes",
+        "hiddenGems"
+      ],
+      "summary": "Tiny East Village espresso bar known for its olive oil cake.",
+      "visitDuration": {
+        "minMinutes": 15,
+        "maxMinutes": 40
+      },
+      "pricing": {
+        "kind": "variableSpend",
+        "freeByNature": false,
+        "minUSD": 0,
+        "maxUSD": null,
+        "note": "Pay for what you order."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date"
+      ],
+      "sourceURL": "https://www.abraconyc.com",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "noguchi-museum",
+      "name": "The Noguchi Museum",
+      "address": "9-01 33rd Rd, Long Island City, NY 11106",
+      "borough": "queens",
+      "neighborhoodID": "long-island-city",
+      "coordinate": {
+        "lat": 40.767,
+        "lng": -73.9381
+      },
+      "categories": [
+        "museums",
+        "architecture",
+        "hiddenGems"
+      ],
+      "summary": "Isamu Noguchi's own museum and sculpture garden, designed by the artist.",
+      "visitDuration": {
+        "minMinutes": 60,
+        "maxMinutes": 120
+      },
+      "pricing": {
+        "kind": "unknown",
+        "freeByNature": false,
+        "minUSD": null,
+        "maxUSD": null,
+        "note": "Admission not yet verified."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date"
+      ],
+      "sourceURL": "https://www.noguchi.org",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "socrates-sculpture-park",
+      "name": "Socrates Sculpture Park",
+      "address": "32-01 Vernon Blvd, Long Island City, NY 11106",
+      "borough": "queens",
+      "neighborhoodID": "long-island-city",
+      "coordinate": {
+        "lat": 40.7686,
+        "lng": -73.9365
+      },
+      "categories": [
+        "outdoors",
+        "culture"
+      ],
+      "summary": "Riverside park and outdoor studio showing large-scale contemporary sculpture.",
+      "visitDuration": {
+        "minMinutes": 30,
+        "maxMinutes": 75
+      },
+      "pricing": {
+        "kind": "free",
+        "freeByNature": true,
+        "minUSD": 0,
+        "maxUSD": 0,
+        "note": null
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://socratessculpturepark.org",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "gantry-plaza",
+      "name": "Gantry Plaza State Park",
+      "address": "4-09 47th Rd, Long Island City, NY 11101",
+      "borough": "queens",
+      "neighborhoodID": "long-island-city",
+      "coordinate": {
+        "lat": 40.7453,
+        "lng": -73.9583
+      },
+      "categories": [
+        "outdoors"
+      ],
+      "summary": "Waterfront park with restored rail gantries and a straight-on view of Midtown.",
+      "visitDuration": {
+        "minMinutes": 30,
+        "maxMinutes": 75
+      },
+      "pricing": {
+        "kind": "free",
+        "freeByNature": true,
+        "minUSD": 0,
+        "maxUSD": 0,
+        "note": null
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://parks.ny.gov/parks/gantryplaza",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "astoria-park",
+      "name": "Astoria Park",
+      "address": "19th St & Shore Blvd, Astoria, NY 11105",
+      "borough": "queens",
+      "neighborhoodID": "astoria",
+      "coordinate": {
+        "lat": 40.7797,
+        "lng": -73.922
+      },
+      "categories": [
+        "outdoors"
+      ],
+      "summary": "Riverside park beneath the Hell Gate and RFK bridges, with lawns and a historic pool.",
+      "visitDuration": {
+        "minMinutes": 45,
+        "maxMinutes": 120
+      },
+      "pricing": {
+        "kind": "free",
+        "freeByNature": true,
+        "minUSD": 0,
+        "maxUSD": 0,
+        "note": null
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://www.nycgovparks.org/parks/astoria-park",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "museum-of-the-moving-image",
+      "name": "Museum of the Moving Image",
+      "address": "36-01 35th Ave, Astoria, NY 11106",
+      "borough": "queens",
+      "neighborhoodID": "astoria",
+      "coordinate": {
+        "lat": 40.7563,
+        "lng": -73.9239
+      },
+      "categories": [
+        "museums",
+        "culture"
+      ],
+      "summary": "Film, television and video games, with hands-on exhibits and a cinema.",
+      "visitDuration": {
+        "minMinutes": 90,
+        "maxMinutes": 150
+      },
+      "pricing": {
+        "kind": "unknown",
+        "freeByNature": false,
+        "minUSD": null,
+        "maxUSD": null,
+        "note": "Admission not yet verified."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "family"
+      ],
+      "sourceURL": "https://movingimage.org",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "queens-museum",
+      "name": "Queens Museum",
+      "address": "Flushing Meadows Corona Park, Queens, NY 11368",
+      "borough": "queens",
+      "neighborhoodID": "flushing-meadows",
+      "coordinate": {
+        "lat": 40.7458,
+        "lng": -73.8467
+      },
+      "categories": [
+        "museums",
+        "culture"
+      ],
+      "summary": "Home of the Panorama of the City of New York, a scale model of all five boroughs.",
+      "visitDuration": {
+        "minMinutes": 60,
+        "maxMinutes": 120
+      },
+      "pricing": {
+        "kind": "unknown",
+        "freeByNature": false,
+        "minUSD": null,
+        "maxUSD": null,
+        "note": "Admission not yet verified."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "family"
+      ],
+      "sourceURL": "https://queensmuseum.org",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "unisphere",
+      "name": "Unisphere",
+      "address": "Flushing Meadows Corona Park, Queens, NY 11368",
+      "borough": "queens",
+      "neighborhoodID": "flushing-meadows",
+      "coordinate": {
+        "lat": 40.7461,
+        "lng": -73.8448
+      },
+      "categories": [
+        "outdoors",
+        "architecture"
+      ],
+      "summary": "The stainless-steel globe built for the 1964 World's Fair.",
+      "visitDuration": {
+        "minMinutes": 20,
+        "maxMinutes": 45
+      },
+      "pricing": {
+        "kind": "free",
+        "freeByNature": true,
+        "minUSD": 0,
+        "maxUSD": 0,
+        "note": null
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://www.nycgovparks.org/parks/flushing-meadows-corona-park",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "ny-botanical-garden",
+      "name": "New York Botanical Garden",
+      "address": "2900 Southern Blvd, Bronx, NY 10458",
+      "borough": "bronx",
+      "neighborhoodID": "bedford-park",
+      "coordinate": {
+        "lat": 40.8623,
+        "lng": -73.88
+      },
+      "categories": [
+        "outdoors"
+      ],
+      "summary": "250-acre garden with a Victorian glasshouse, old-growth forest and seasonal displays.",
+      "visitDuration": {
+        "minMinutes": 120,
+        "maxMinutes": 240
+      },
+      "pricing": {
+        "kind": "ticketed",
+        "freeByNature": false,
+        "minUSD": null,
+        "maxUSD": null,
+        "note": "Admission is charged; current prices are on the official site."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://www.nybg.org",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "bronx-zoo",
+      "name": "Bronx Zoo",
+      "address": "2300 Southern Blvd, Bronx, NY 10460",
+      "borough": "bronx",
+      "neighborhoodID": "bronx-park",
+      "coordinate": {
+        "lat": 40.8506,
+        "lng": -73.877
+      },
+      "categories": [
+        "outdoors"
+      ],
+      "summary": "One of the largest metropolitan zoos in the world, set in Bronx Park.",
+      "visitDuration": {
+        "minMinutes": 150,
+        "maxMinutes": 300
+      },
+      "pricing": {
+        "kind": "ticketed",
+        "freeByNature": false,
+        "minUSD": null,
+        "maxUSD": null,
+        "note": "Admission is charged; current prices are on the official site."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "friends",
+        "family"
+      ],
+      "sourceURL": "https://bronxzoo.com",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "wave-hill",
+      "name": "Wave Hill",
+      "address": "4900 Independence Ave, Bronx, NY 10471",
+      "borough": "bronx",
+      "neighborhoodID": "riverdale",
+      "coordinate": {
+        "lat": 40.8986,
+        "lng": -73.9126
+      },
+      "categories": [
+        "outdoors",
+        "culture",
+        "hiddenGems"
+      ],
+      "summary": "Public garden and cultural center on a former estate overlooking the Hudson and the Palisades.",
+      "visitDuration": {
+        "minMinutes": 60,
+        "maxMinutes": 150
+      },
+      "pricing": {
+        "kind": "unknown",
+        "freeByNature": false,
+        "minUSD": null,
+        "maxUSD": null,
+        "note": "Admission not yet verified."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date"
+      ],
+      "sourceURL": "https://www.wavehill.org",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "bronx-museum",
+      "name": "Bronx Museum of the Arts",
+      "address": "1040 Grand Concourse, Bronx, NY 10456",
+      "borough": "bronx",
+      "neighborhoodID": "concourse",
+      "coordinate": {
+        "lat": 40.8306,
+        "lng": -73.9201
+      },
+      "categories": [
+        "museums",
+        "culture"
+      ],
+      "summary": "Contemporary art with a focus on artists connected to the Bronx and the African and Latin American diasporas.",
+      "visitDuration": {
+        "minMinutes": 45,
+        "maxMinutes": 90
+      },
+      "pricing": {
+        "kind": "free",
+        "freeByNature": false,
+        "minUSD": 0,
+        "maxUSD": 0,
+        "note": "Admission has long been free; confirm on the official site."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date"
+      ],
+      "sourceURL": "https://www.bronxmuseum.org",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "staten-island-ferry",
+      "name": "Staten Island Ferry",
+      "address": "St. George Terminal, 1 Bay St, Staten Island, NY 10301",
+      "borough": "staten-island",
+      "neighborhoodID": "st-george",
+      "coordinate": {
+        "lat": 40.6437,
+        "lng": -74.0736
+      },
+      "categories": [
+        "outdoors",
+        "hiddenGems"
+      ],
+      "summary": "The free commuter ferry between Whitehall and St. George, passing the Statue of Liberty.",
+      "visitDuration": {
+        "minMinutes": 60,
+        "maxMinutes": 90
+      },
+      "pricing": {
+        "kind": "free",
+        "freeByNature": true,
+        "minUSD": 0,
+        "maxUSD": 0,
+        "note": "A free public ferry."
+      },
+      "hours": {
+        "kind": "alwaysOpen"
+      },
+      "reservation": "unknown",
+      "accessNotes": "The trip takes about 25 minutes each way.",
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://www.siferry.com",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "snug-harbor",
+      "name": "Snug Harbor Cultural Center & Botanical Garden",
+      "address": "1000 Richmond Terrace, Staten Island, NY 10301",
+      "borough": "staten-island",
+      "neighborhoodID": "new-brighton",
+      "coordinate": {
+        "lat": 40.6437,
+        "lng": -74.1027
+      },
+      "categories": [
+        "outdoors",
+        "culture",
+        "architecture"
+      ],
+      "summary": "Greek Revival buildings and gardens, including a Chinese Scholar's Garden, on a former sailors' retirement home.",
+      "visitDuration": {
+        "minMinutes": 60,
+        "maxMinutes": 150
+      },
+      "pricing": {
+        "kind": "unknown",
+        "freeByNature": false,
+        "minUSD": null,
+        "maxUSD": null,
+        "note": "Admission not yet verified."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://snug-harbor.org",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "fort-wadsworth",
+      "name": "Fort Wadsworth",
+      "address": "210 New York Ave, Staten Island, NY 10305",
+      "borough": "staten-island",
+      "neighborhoodID": "fort-wadsworth",
+      "coordinate": {
+        "lat": 40.606,
+        "lng": -74.056
+      },
+      "categories": [
+        "outdoors",
+        "architecture",
+        "hiddenGems"
+      ],
+      "summary": "Historic coastal fort at the Narrows with a close view of the Verrazzano-Narrows Bridge.",
+      "visitDuration": {
+        "minMinutes": 45,
+        "maxMinutes": 90
+      },
+      "pricing": {
+        "kind": "unknown",
+        "freeByNature": false,
+        "minUSD": null,
+        "maxUSD": null,
+        "note": "Admission not yet verified."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "date",
+        "family"
+      ],
+      "sourceURL": "https://www.nps.gov/gate",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    },
+    {
+      "id": "greenbelt-nature-center",
+      "name": "Greenbelt Nature Center",
+      "address": "700 Rockland Ave, Staten Island, NY 10314",
+      "borough": "staten-island",
+      "neighborhoodID": "greenbelt",
+      "coordinate": {
+        "lat": 40.5891,
+        "lng": -74.1383
+      },
+      "categories": [
+        "outdoors",
+        "hiddenGems"
+      ],
+      "summary": "Trailhead and nature center for the Staten Island Greenbelt's woodland paths.",
+      "visitDuration": {
+        "minMinutes": 45,
+        "maxMinutes": 150
+      },
+      "pricing": {
+        "kind": "unknown",
+        "freeByNature": false,
+        "minUSD": null,
+        "maxUSD": null,
+        "note": "Admission not yet verified."
+      },
+      "hours": {
+        "kind": "unknown"
+      },
+      "reservation": "unknown",
+      "accessNotes": null,
+      "suits": [
+        "solo",
+        "friends",
+        "family"
+      ],
+      "sourceURL": "https://sigreenbelt.org",
+      "verification": {
+        "status": "unverified",
+        "checkedOn": null,
+        "note": "Compiled from general knowledge; confirm hours and prices on the official site."
+      },
+      "image": null,
+      "tags": []
+    }
+  ],
+  "events": [],
+  "collections": [
+    {
+      "id": "five-boroughs",
+      "title": "Five Boroughs",
+      "summary": "Record a visit to a catalog place in each of the five boroughs.",
+      "mark": "5B",
+      "tone": "accent",
+      "rule": {
+        "type": "boroughs",
+        "required": 5
+      }
+    },
+    {
+      "id": "nyc-for-free",
+      "title": "NYC for Free",
+      "summary": "Public places with no admission charge: parks, promenades, a library and a ferry.",
+      "mark": "$0",
+      "tone": "sage",
+      "rule": {
+        "type": "places",
+        "placeIDs": [
+          "fort-greene-park",
+          "prospect-park",
+          "brooklyn-bridge-park",
+          "brooklyn-heights-promenade",
+          "domino-park",
+          "coney-island-boardwalk",
+          "high-line",
+          "little-island",
+          "central-park-bethesda",
+          "nypl-schwarzman",
+          "grand-central",
+          "washington-square-park",
+          "brooklyn-bridge-walk",
+          "socrates-sculpture-park",
+          "gantry-plaza",
+          "astoria-park",
+          "unisphere",
+          "staten-island-ferry"
+        ],
+        "required": 10
+      }
+    },
+    {
+      "id": "museum-discoveries",
+      "title": "Museum Discoveries",
+      "summary": "Big institutions and small specialist museums across the city.",
+      "mark": "MD",
+      "tone": "ink",
+      "rule": {
+        "type": "places",
+        "placeIDs": [
+          "brooklyn-museum",
+          "building-92",
+          "center-for-brooklyn-history",
+          "the-met",
+          "moma",
+          "tenement-museum",
+          "met-cloisters",
+          "studio-museum-harlem",
+          "noguchi-museum",
+          "museum-of-the-moving-image",
+          "queens-museum",
+          "bronx-museum"
+        ],
+        "required": 6
+      }
+    },
+    {
+      "id": "date-adventures",
+      "title": "Date Adventures",
+      "summary": "Views, gardens and quiet galleries that suit two people.",
+      "mark": "DA",
+      "tone": "indigo",
+      "rule": {
+        "type": "places",
+        "placeIDs": [
+          "little-island",
+          "met-cloisters",
+          "brooklyn-heights-promenade",
+          "wave-hill",
+          "domino-park",
+          "gantry-plaza",
+          "moma",
+          "janes-carousel",
+          "high-line",
+          "green-wood-cemetery",
+          "noguchi-museum",
+          "tenement-museum"
+        ],
+        "required": 5
+      }
+    },
+    {
+      "id": "food-trails",
+      "title": "Food Trails",
+      "summary": "Food halls, delis and cafés worth the trip.",
+      "mark": "FT",
+      "tone": "accent",
+      "rule": {
+        "type": "places",
+        "placeIDs": [
+          "dekalb-market-hall",
+          "devocion-williamsburg",
+          "brooklyn-roasting-dumbo",
+          "chelsea-market",
+          "katzs-delicatessen",
+          "russ-and-daughters",
+          "abraco"
+        ],
+        "required": 4
+      }
+    }
+  ]
+}
